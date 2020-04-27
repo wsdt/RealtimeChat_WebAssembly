@@ -1,0 +1,85 @@
+﻿@page "/chat"
+
+@using WSDTChat.Services
+@using Microsoft.AspNetCore.SignalR.Client
+@using WSDTChat.Hubs.HubEvent
+
+@inject NavigationManager NavigationManager
+@inject WSDTChat.Services.IChatService ChatService
+
+
+<div class="card" style="margin:15px;">
+    <div class="card-header">
+        <h5>Live-Chat</h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+            <AuthorizeView>
+                <Authorized>You are logged in</Authorized>
+                <NotAuthorized>Log in to access all features</NotAuthorized>
+            </AuthorizeView>
+        </h6>
+    </div>
+
+    <ul id="messagesList" class="list-group list-group-flush">
+        @foreach (var message in ChatService.Messages)
+        {
+            <li class="list-group-item"><div class="animated lightSpeedIn" style="font-size: small;display:inline-block;"><strong>@message.User</strong>: @message.Message</div></li>
+        }
+    </ul>
+    <div class="card-body">
+        <AuthorizeView>
+            <NotAuthorized>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-mail">&#x00040;</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="E-Mail" aria-label="E-Mail" aria-describedby="addon-inputmail" @bind="ChatService.UserInput" />
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-msg">&#x2709;</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="addon-inputmsg" @bind="ChatService.MessageInput" />
+        </div>
+
+        <button type="button" class="btn btn-outline-info text-center" @onclick="ChatService.Send" disabled="@(!ChatService.IsConnected())">Send</button>
+
+    </div>
+    <div class="card-footer text-muted">
+        <small>More on <a href="https://github.com/wsdt" title="Github - WSDT">Github/WSDT</a>.</small>
+    </div>
+</div>
+
+@code {
+    [CascadingParameter] Task<AuthenticationState> AuthenticationStateTask { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        ChatService.HubConnection = new HubConnectionBuilder()
+            .WithUrl(NavigationManager.ToAbsoluteUri(ICommonRoutes.CHAT_HUB))
+            .Build();
+
+
+        ChatService.HubConnection.On<string, string>(IPublic.RECEIVE_MSG, (user, message) =>
+        {
+            var encodedMsg = new ChatMsg(user, message);
+            ChatService.Messages.Add(encodedMsg);
+            StateHasChanged();
+        });
+
+        await ChatService.HubConnection.StartAsync();
+        await SetUsernameIfLoggedIn();
+    }
+
+    public async Task SetUsernameIfLoggedIn()
+    {
+        var authState = await AuthenticationStateTask;
+        var user = authState.User;
+        if (user.Identity.IsAuthenticated)
+        {
+            ChatService.UserInput = user.Identity.Name;
+        }
+    }
+}
