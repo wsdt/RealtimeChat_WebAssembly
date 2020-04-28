@@ -8932,11 +8932,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\WSDTChat\\WSDTChat\\WSDTChat.csproj",
+      "projectUniqueName": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
       "projectName": "WSDTChat",
-      "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\WSDTChat\\WSDTChat\\WSDTChat.csproj",
+      "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
       "packagesPath": "C:\\Users\\WSDT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\WSDTChat\\WSDTChat\\obj\\",
+      "outputPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\WSDTChat\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

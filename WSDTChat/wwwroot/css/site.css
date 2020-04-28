@@ -181,3 +181,11 @@ app {
         display: block;
     }
 }
+
+
+/* ChatForm Validation */
+.validation-message {
+    font-size: 80%;
+    margin-top: -13px;
+    margin-bottom: 12px;
+}

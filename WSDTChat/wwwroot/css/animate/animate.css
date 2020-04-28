@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 /*!
  * animate.css -https://daneden.github.io/animate.css/
@@ -1653,12 +1653,20 @@
 }
 
 @keyframes fadeOut {
-  from {
+  0% {
     opacity: 1;
   }
 
-  to {
-    opacity: 0;
+  99% {
+      opacity: 0;
+      z-index: 1;
+  }
+
+  100% {
+    display:none;
+    visibility: hidden;
+    position: fixed;
+    z-index: -5;
   }
 }
 

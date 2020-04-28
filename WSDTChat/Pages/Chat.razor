@@ -1,8 +1,10 @@
 ﻿@page "/chat"
 
 @using WSDTChat.Services
+@using System.Text.Json;
 @using Microsoft.AspNetCore.SignalR.Client
 @using WSDTChat.Hubs.HubEvent
+@using WSDTChat.Domain
 
 @inject NavigationManager NavigationManager
 @inject WSDTChat.Services.IChatService ChatService
@@ -20,31 +22,50 @@
     </div>
 
     <ul id="messagesList" class="list-group list-group-flush">
-        @foreach (var message in ChatService.Messages)
+        @foreach (var UserMessage in ChatService.AllMessages)
         {
-            <li class="list-group-item"><div class="animated lightSpeedIn" style="font-size: small;display:inline-block;"><strong>@message.User</strong>: @message.Message</div></li>
+            <li class="list-group-item">
+                <strong>@UserMessage.User.EMail</strong>
+                @if (UserMessage.User.IsGuest)
+                {
+                    <span class="badge badge-pill badge-dark">Guest</span>
+                }
+                <div style="font-size:small;">
+                    @foreach (var Submsg in UserMessage.Messages)
+                    {
+                        <div class="animated lightSpeedIn">@Submsg</div>
+                    }
+                </div>
+            </li>
         }
     </ul>
     <div class="card-body">
-        <AuthorizeView>
-            <NotAuthorized>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="addon-mail">&#x00040;</span>
+        <EditForm Model="@ChatService.ChatForm" Context="formContext" OnValidSubmit="ChatService.Send">
+            <DataAnnotationsValidator />
+            <AuthorizeView>
+                <NotAuthorized>
+                    <div class="input-group mb-3 @(ChatService.HasSentMsg ? "animated fadeOut":"")">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="addon-mail">&#x00040;</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="E-Mail" aria-label="E-Mail" aria-describedby="addon-inputmail" @bind-value="ChatService.ChatForm.CurrentUser.EMail" />
                     </div>
-                    <input type="text" class="form-control" placeholder="E-Mail" aria-label="E-Mail" aria-describedby="addon-inputmail" @bind="ChatService.UserInput" />
+                    <ValidationMessage For="@(() => ChatService.ChatForm.CurrentUser.EMail)" />
+                </NotAuthorized>
+            </AuthorizeView>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-msg">&#x2709;</span>
                 </div>
-            </NotAuthorized>
-        </AuthorizeView>
-
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="addon-msg">&#x2709;</span>
+                <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="addon-inputmsg" @bind-value="ChatService.ChatForm.MessageInput" />
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline-info text-center" disabled="@(!ChatService.IsConnected())">Send</button>
+                </div>
             </div>
-            <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="addon-inputmsg" @bind="ChatService.MessageInput" />
-        </div>
+            <ValidationMessage For="@(() => ChatService.ChatForm.MessageInput)" />
+        </EditForm>
 
-        <button type="button" class="btn btn-outline-info text-center" @onclick="ChatService.Send" disabled="@(!ChatService.IsConnected())">Send</button>
 
     </div>
     <div class="card-footer text-muted">
@@ -64,8 +85,21 @@
 
         ChatService.HubConnection.On<string, string>(IPublic.RECEIVE_MSG, (user, message) =>
         {
-            var encodedMsg = new ChatMsg(user, message);
-            ChatService.Messages.Add(encodedMsg);
+            var chatUser = JsonSerializer.Deserialize<ChatUser>(user);
+            var lastMessage = ChatService.AllMessages.LastOrDefault();
+            if (lastMessage != null && lastMessage.User.Equals(chatUser))
+            {
+            // If last message has been written by the same user, add it to the last chatMsg-obj
+            lastMessage.Messages.Add(message);
+            }
+            else
+            {
+            // other user typed msg
+            ChatService.AllMessages.Add(
+                        new ChatMsg(chatUser, new List<string> { message })
+                    );
+            }
+
             StateHasChanged();
         });
 
@@ -79,7 +113,8 @@
         var user = authState.User;
         if (user.Identity.IsAuthenticated)
         {
-            ChatService.UserInput = user.Identity.Name;
+            ChatService.ChatForm.CurrentUser.EMail = user.Identity.Name;
         }
+        ChatService.ChatForm.CurrentUser.IsGuest = !user.Identity.IsAuthenticated;
     }
 }

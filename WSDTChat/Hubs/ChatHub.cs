@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+using System.Text.Json;
 using System.Threading.Tasks;
+using WSDTChat.Domain;
 
 namespace WSDTChat.Hubs
 {
