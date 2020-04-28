@@ -1,6 +1,4 @@
-﻿@page "/chat"
-
-@using WSDTChat.Services
+﻿@using WSDTChat.Services
 @using System.Text.Json;
 @using Microsoft.AspNetCore.SignalR.Client
 @using WSDTChat.Hubs.HubEvent
@@ -24,8 +22,8 @@
     <ul id="messagesList" class="list-group list-group-flush">
         @foreach (var UserMessage in ChatService.AllMessages)
         {
-            <li class="list-group-item">
-                <strong>@UserMessage.User.EMail</strong>
+            <li class="list-group-item" style="@(UserMessage.User.Equals(ChatSystemMsg.SystemUser) ? "color: #ccc;font-style:italic;font-weight:bold;" : "")">
+                <strong>@UserMessage.User.EMail</strong> <sup>@UserMessage.GetTimeDifference()</sup>
                 @if (UserMessage.User.IsGuest)
                 {
                     <span class="badge badge-pill badge-dark">Guest</span>
@@ -83,21 +81,34 @@
             .Build();
 
 
+        ChatService.HubConnection.On<string, MsgPriority>(IPublic.SYSTEM_MSG, (message, priority) =>
+        {
+            var lastMessage = ChatService.AllMessages.LastOrDefault();
+            if (lastMessage != null && lastMessage.User.Equals(ChatSystemMsg.SystemUser))
+            {
+                lastMessage.Messages.Add(message);
+            }
+            else
+            {
+                ChatService.AllMessages.Add(new ChatSystemMsg(new List<string> { message }, priority));
+            }
+        });
+
         ChatService.HubConnection.On<string, string>(IPublic.RECEIVE_MSG, (user, message) =>
         {
             var chatUser = JsonSerializer.Deserialize<ChatUser>(user);
             var lastMessage = ChatService.AllMessages.LastOrDefault();
             if (lastMessage != null && lastMessage.User.Equals(chatUser))
             {
-            // If last message has been written by the same user, add it to the last chatMsg-obj
-            lastMessage.Messages.Add(message);
+                // If last message has been written by the same user, add it to the last chatMsg-obj
+                lastMessage.Messages.Add(message);
             }
             else
             {
-            // other user typed msg
-            ChatService.AllMessages.Add(
-                        new ChatMsg(chatUser, new List<string> { message })
-                    );
+                // other user typed msg
+                ChatService.AllMessages.Add(
+                            new ChatMsg(chatUser, new List<string> { message })
+                        );
             }
 
             StateHasChanged();
@@ -105,6 +116,7 @@
 
         await ChatService.HubConnection.StartAsync();
         await SetUsernameIfLoggedIn();
+        await ChatService.Join(); // notify other chat members about new chatter
     }
 
     public async Task SetUsernameIfLoggedIn()
