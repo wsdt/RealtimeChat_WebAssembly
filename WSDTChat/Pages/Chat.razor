@@ -4,6 +4,7 @@
 @using WSDTChat.Hubs.HubEvent
 @using WSDTChat.Domain
 @using EmojiPicker.Areas.EmojiTextInput.Pages
+@using Markdig;
 
 @inject NavigationManager NavigationManager
 @inject WSDTChat.Services.IChatService ChatService
@@ -31,7 +32,7 @@
                 <div style="font-size:small;">
                     @foreach (var Submsg in UserMessage.Messages)
                     {
-                        <div class="animated lightSpeedIn">@((MarkupString)Submsg)</div>
+                        <div class="animated lightSpeedIn">@((MarkupString)Markdown.ToHtml(Submsg))</div>
                     }
                 </div>
             </li>
@@ -52,6 +53,7 @@
                 </NotAuthorized>
             </AuthorizeView>
 
+            <small style="font-style:italic;font-weight: bold;">Markdown and Html are supported :-)</small>
             <EmojiInput AddonPrepend="✉" IsSubmitDisabled="@(!ChatService.IsConnected())" Placeholder="Message" ShowSubmit="true" @bind-Message="ChatService.ChatForm.MessageInput" />
             <ValidationMessage For="@(() => ChatService.ChatForm.MessageInput)" />
         </EditForm>

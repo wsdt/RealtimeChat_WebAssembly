@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "j6lhbz3tgmvYWkjNzmbYtcju0SLIaNc8ZcMCIMFq6Vc55yKpjYuUuUmLGgsMX6PRTHxpZRrsGk77pWPgoV/80Q==",
+  "dgSpecHash": "K0r0FGjKPcssxN9FgOVSvPfzYJJyX5RCtvARHbDk49X91adMf8HPSsS9vFp4356xjjukNXHfsP+XLf+G9BKYeA==",
   "success": true,
   "projectFilePath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WSDT\\.nuget\\packages\\bootstrap\\4.4.1\\bootstrap.4.4.1.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",
+    "C:\\Users\\WSDT\\.nuget\\packages\\markdig\\0.20.0\\markdig.0.20.0.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.3\\microsoft.aspnetcore.connections.abstractions.3.1.3.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.3\\microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.3\\microsoft.aspnetcore.cryptography.keyderivation.3.1.3.nupkg.sha512",
