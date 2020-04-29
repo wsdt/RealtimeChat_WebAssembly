@@ -1,0 +1,26 @@
+﻿<style>
+    .smiley-btn {
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .smiley-btn:hover {
+        background-color: #ccc;
+    }
+
+    .smiley-btn:active {
+        background-color: #aaa;
+    }
+</style> 
+
+<span @onclick="@(() => AddEmoji.InvokeAsync(Emoji))" class="smiley-btn">@Emoji</span>
+
+
+@code {
+    [Parameter]
+    public EventCallback<string> AddEmoji { get; set; }
+
+    [Parameter]
+    public string Emoji { get; set; }
+}

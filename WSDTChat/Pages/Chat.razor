@@ -3,10 +3,10 @@
 @using Microsoft.AspNetCore.SignalR.Client
 @using WSDTChat.Hubs.HubEvent
 @using WSDTChat.Domain
+@using EmojiPicker.Areas.EmojiTextInput.Pages
 
 @inject NavigationManager NavigationManager
 @inject WSDTChat.Services.IChatService ChatService
-
 
 <div class="card" style="margin:15px;">
     <div class="card-header">
@@ -31,7 +31,7 @@
                 <div style="font-size:small;">
                     @foreach (var Submsg in UserMessage.Messages)
                     {
-                        <div class="animated lightSpeedIn">@Submsg</div>
+                        <div class="animated lightSpeedIn">@((MarkupString)Submsg)</div>
                     }
                 </div>
             </li>
@@ -52,15 +52,7 @@
                 </NotAuthorized>
             </AuthorizeView>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="addon-msg">&#x2709;</span>
-                </div>
-                <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="addon-inputmsg" @bind-value="ChatService.ChatForm.MessageInput" />
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-outline-info text-center" disabled="@(!ChatService.IsConnected())">Send</button>
-                </div>
-            </div>
+            <EmojiInput AddonPrepend="✉" IsSubmitDisabled="@(!ChatService.IsConnected())" Placeholder="Message" ShowSubmit="true" @bind-Message="ChatService.ChatForm.MessageInput" />
             <ValidationMessage For="@(() => ChatService.ChatForm.MessageInput)" />
         </EditForm>
 

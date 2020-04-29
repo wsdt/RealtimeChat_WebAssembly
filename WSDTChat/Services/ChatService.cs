@@ -38,7 +38,7 @@ namespace WSDTChat.Services
         }
 
         public Task Join() => HubConnection.SendAsync("SystemMsg",
-                $"{ChatForm.CurrentUser.EMail} has joined the conversation.", MsgPriority.LOW
+                $"{ChatForm.CurrentUser.EMail ?? "Guest"} has joined the conversation.", MsgPriority.LOW
                 );
 
         public Task Send()

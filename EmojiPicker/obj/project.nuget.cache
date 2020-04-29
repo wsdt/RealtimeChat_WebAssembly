@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "cd++T8JarAvBJuk36MjKoUypHVa+niGMatMzKGoypQXSm65Z8dSPqMwicWGqHsFts2suqLowDMm2yu1UsRKcFA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\WSDT\\.nuget\\packages\\bootstrap\\4.4.1\\bootstrap.4.4.1.nupkg.sha512",
+    "C:\\Users\\WSDT\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",
+    "C:\\Users\\WSDT\\.nuget\\packages\\popper.js\\1.16.0\\popper.js.1.16.0.nupkg.sha512"
+  ],
+  "logs": []
+}

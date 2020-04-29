@@ -1,0 +1,111 @@
+﻿@using EmojiPicker.Areas.EmojiTextInput.Pages
+
+<style>
+    /* Popover styling */
+    .popover__wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .popover__content {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: -150px;
+        transform: translate(0px, -10px);
+        transition-delay: 0.5s;
+        background-color: #F8F8F8;
+        padding: 1.5rem;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        width: auto;
+    }
+
+        .popover__content:before {
+            position: absolute;
+            z-index: -1;
+            content: "";
+            right: calc(50% - 10px);
+            top: -8px;
+            border-style: solid;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent #F8F8F8 transparent;
+            transition-duration: 0.3s;
+            transition-property: transform;
+        }
+
+    .popover__wrapper:hover .popover__content {
+        z-index: 10;
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px, 10px);
+        transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    }
+</style>
+
+
+
+<div class="input-group mb-3">
+    @if (AddonPrepend != null)
+    {
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-msg">@AddonPrepend</span>
+        </div>
+    }
+    <input type="text" class="form-control" placeholder="@Placeholder" aria-label="@Placeholder" aria-describedby="button-emojipicker" @bind="Message">
+    <div class="input-group-append popover__wrapper">
+        <button class="btn btn-outline-secondary" type="button" id="button-emojipicker">&#x1F600;</button>
+        <div class="popover__content">
+
+
+            <EmojiPanel AddEmoji="AddEmoji" />
+
+        </div>
+
+    </div>
+
+    <div class="input-group-append">
+        @if (ShowSubmit)
+        {
+            <button type="submit" class="btn btn-outline-info text-center" disabled="@IsSubmitDisabled">Send</button>
+        }
+    </div>
+
+</div>
+
+
+
+@code {
+    private string _message;
+
+    [Parameter]
+    public string Message
+    {
+        get => _message;
+        set
+        {
+            if (_message == value) return;
+            _message = value;
+            MessageChanged.InvokeAsync(value);
+        }
+    }
+
+    [Parameter]
+    public EventCallback<string> MessageChanged { get; set; }
+
+    [Parameter]
+    public string Placeholder { get; set; }
+
+    [Parameter]
+    public string AddonPrepend { get; set; }
+
+    [Parameter]
+    public bool ShowSubmit { get; set; } = true;
+
+    [Parameter]
+    public bool IsSubmitDisabled { get; set; } = false;
+
+    protected void AddEmoji(string emoji) => Message += emoji;
+
+}
+
+

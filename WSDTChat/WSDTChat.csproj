@@ -16,4 +16,8 @@
     <PackageReference Include="SendGrid" Version="9.14.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EmojiPicker\EmojiPicker.csproj" />
+  </ItemGroup>
+
 </Project>

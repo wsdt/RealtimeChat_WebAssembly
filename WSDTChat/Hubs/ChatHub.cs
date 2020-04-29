@@ -8,9 +8,9 @@ namespace WSDTChat.Hubs
 {
     public class ChatHub : Hub
     {
-        public async override Task OnConnectedAsync() {
-            Console.WriteLine($"New connection from {Context.ConnectionId} at {DateTime.Now.ToString()}"); 
-        }
+
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public override async Task OnConnectedAsync() => Console.WriteLine($"New connection from {Context.ConnectionId} at {DateTime.Now}");
 
         public async Task SystemMsg(string message, MsgPriority priority)
         {
