@@ -1,0 +1,3 @@
+[submodule "EmojiPicker"]
+	path = EmojiPicker
+	url = https://github.com/wsdt/Blazor_EmojiFilePicker

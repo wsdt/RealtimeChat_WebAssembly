@@ -1,19 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
 
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
+		<PackageId>Blazor_EmojiFilePicker</PackageId>
+		<Title>Emoji- and Filepicker for Blazor</Title>
+		<Description>Provides a simple Bootstrap Text-Input field with Smiley- and File-Support.</Description>
+		<Version>0.0.1</Version>
+		<Authors>Kevin Riedl: github.com/wsdt</Authors>
+		<Company>Self-Employed</Company>
+		<RepositoryUrl>https://github.com/wsdt/Blazor_EmojiFilePicker</RepositoryUrl>
+		<PackageTags>Blazor;Emoji;Smiley;Input;Text;File;Image;Picker;Bootstrap</PackageTags>
+		
+		<Copyright>WSDT - Riedl Kevin</Copyright>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+		
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="bootstrap" Version="4.4.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.3" />
-    <PackageReference Include="Tewr.Blazor.FileReader" Version="1.5.0.20109" />
-  </ItemGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="bootstrap" Version="4.4.1" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.3" />
+		<PackageReference Include="Tewr.Blazor.FileReader" Version="1.5.0.20109" />
+	</ItemGroup>
 
 
 </Project>
