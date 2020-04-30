@@ -48,6 +48,7 @@ namespace WSDTChat.Services
             var res = HubConnection.SendAsync("BroadcastMsg",
                 JsonSerializer.Serialize(ChatForm.CurrentUser),
                 ChatForm.MessageInput);
+            
             ChatForm.MessageInput = "";
             return res;
         }

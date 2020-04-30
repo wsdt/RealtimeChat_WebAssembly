@@ -1,5 +1,6 @@
 ﻿@using EmojiPicker.Areas.EmojiTextInput.Pages
 
+
 <style>
     /* Popover styling */
     .popover__wrapper {
@@ -52,6 +53,14 @@
         </div>
     }
     <input type="text" class="form-control" placeholder="@Placeholder" aria-label="@Placeholder" aria-describedby="button-emojipicker" @bind="Message">
+
+    @if (ShowFilePicker)
+    {
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" @onclick="() => IsFilePickerCollapsed ^= true">&#128206;</button>
+        </div>
+    }
+
     <div class="input-group-append popover__wrapper">
         <button class="btn btn-outline-secondary" type="button" id="button-emojipicker">&#x1F600;</button>
         <div class="popover__content">
@@ -59,20 +68,25 @@
         </div>
 
     </div>
-
-    <div class="input-group-append">
-        @if (ShowSubmit)
-        {
+    @if (ShowSubmit)
+    {
+        <div class="input-group-append">
             <button type="submit" class="btn btn-outline-info text-center" disabled="@IsSubmitDisabled">Send</button>
-        }
-    </div>
+        </div>
+    }
 
 </div>
 
+<div style="@(IsFilePickerCollapsed ? "display:none;" : "")">
+    <FileUploader AddImages="AddImages" FileUploadRoute="@FileUploadRoute" />
+</div>
 
 
 @code {
     private string _message;
+
+    [Parameter]
+    public string FileUploadRoute { get; set; }
 
     [Parameter]
     public string Message
@@ -90,10 +104,16 @@
     public EventCallback<string> MessageChanged { get; set; }
 
     [Parameter]
+    public Action<List<string>> AddImages { get; set; }
+
+    [Parameter]
     public string Placeholder { get; set; }
 
     [Parameter]
     public string AddonPrepend { get; set; }
+
+    [Parameter]
+    public bool ShowFilePicker { get; set; } = true;
 
     [Parameter]
     public bool ShowSubmit { get; set; } = true;
@@ -103,6 +123,7 @@
 
     protected void AddEmoji(string emoji) => Message += emoji;
 
+    private bool IsFilePickerCollapsed { get; set; } = true;
 }
 
 

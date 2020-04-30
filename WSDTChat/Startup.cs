@@ -1,3 +1,4 @@
+using EmojiPicker;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -49,6 +50,8 @@ namespace WSDTChat
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(Configuration);
 
+            // Emoji Picker Library
+            services.AddEmojiPicker();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

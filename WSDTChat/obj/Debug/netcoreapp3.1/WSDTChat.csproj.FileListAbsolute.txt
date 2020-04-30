@@ -345,6 +345,13 @@ C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTCh
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\obj\Debug\netcoreapp3.1\WSDTChat.pdb
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\obj\Debug\netcoreapp3.1\WSDTChat.genruntimeconfig.cache
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\bin\Debug\netcoreapp3.1\Markdig.dll
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.dll
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\bin\Debug\netcoreapp3.1\Microsoft.JSInterop.dll
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\bin\Debug\netcoreapp3.1\Blazor.FileReader.dll
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\obj\Debug\netcoreapp3.1\WSDTChat.csproj.CoreCompileInputs.cache
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\obj\Debug\netcoreapp3.1\WSDTChat.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\obj\Debug\netcoreapp3.1\WSDTChat.MvcApplicationPartsAssemblyInfo.cache
@@ -357,3 +364,4 @@ C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTCh
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\obj\Debug\netcoreapp3.1\Razor\Shared\NavMenu.razor.g.cs
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\obj\Debug\netcoreapp3.1\Razor\_Imports.razor.g.cs
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\SignalR\RealtimeChat_WebAssembly\WSDTChat\bin\Debug\netcoreapp3.1\EmojiPicker.StaticWebAssets.xml

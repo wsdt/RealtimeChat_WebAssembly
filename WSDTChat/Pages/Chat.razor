@@ -9,6 +9,31 @@
 @inject NavigationManager NavigationManager
 @inject WSDTChat.Services.IChatService ChatService
 
+<style>
+    .resizedImg {
+        height: 200px;
+        background-color: #ccc;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #ccc;
+        /* border-radius */
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        /* box-shadow */
+        -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 3px;
+        -moz-box-shadow: rgba(0,0,0,0.8) 0 0 3px;
+        box-shadow: rgba(0,0,0,0.8) 0 0 3px;
+        cursor: pointer;
+
+        transition: opacity 1s;
+    }
+    .resizedImg:hover {
+        opacity: 0.5;
+    }
+</style>
+
+
 <div class="card" style="margin:15px;">
     <div class="card-header">
         <h5>Live-Chat</h5>
@@ -54,7 +79,8 @@
             </AuthorizeView>
 
             <small style="font-style:italic;font-weight: bold;">Markdown and Html are supported :-)</small>
-            <EmojiInput AddonPrepend="✉" IsSubmitDisabled="@(!ChatService.IsConnected())" Placeholder="Message" ShowSubmit="true" @bind-Message="ChatService.ChatForm.MessageInput" />
+            <EmojiInput AddonPrepend="✉" IsSubmitDisabled="@(!ChatService.IsConnected())" Placeholder="Message" ShowSubmit="true" 
+                        @bind-Message="ChatService.ChatForm.MessageInput" AddImages="AddImages" FileUploadRoute="@(ICommonRoutes.FILE_UPLOAD)" />
             <ValidationMessage For="@(() => ChatService.ChatForm.MessageInput)" />
         </EditForm>
 
@@ -65,8 +91,19 @@
     </div>
 </div>
 
+
 @code {
     [CascadingParameter] Task<AuthenticationState> AuthenticationStateTask { get; set; }
+
+    private void AddToMsg(string msg) => ChatService.ChatForm.MessageInput += msg;
+
+    public void AddImages(List<string> imgUris)
+    {
+        foreach (string imgUri in imgUris) AddToMsg($"<img src='{imgUri}' alt='Image' class='resizedImg' />");
+
+        ChatService.Send();
+        StateHasChanged();
+    }
 
     protected override async Task OnInitializedAsync()
     {
