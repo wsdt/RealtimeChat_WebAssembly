@@ -79,8 +79,8 @@
             </AuthorizeView>
 
             <small style="font-style:italic;font-weight: bold;">Markdown and Html are supported :-)</small>
-            <EmojiInput IsSubmitDisabled="@(!ChatService.IsConnected())" Placeholder="Message" ShowSubmit="true" 
-                        @bind-Message="ChatService.ChatForm.MessageInput" AddImages="AddImages" FileUploadRoute="@(ICommonRoutes.FILE_UPLOAD)" />
+            <EmojiInput IsSubmitDisabled="@(!ChatService.IsConnected())" Placeholder="Message.." ShowSubmit="true" 
+                        @bind-Message="ChatService.ChatForm.MessageInput" AddFiles="AddFiles" FileUploadRoute="@(ICommonRoutes.FILE_UPLOAD)" />
             <ValidationMessage For="@(() => ChatService.ChatForm.MessageInput)" />
         </EditForm>
 
@@ -97,7 +97,7 @@
 
     private void AddToMsg(string msg) => ChatService.ChatForm.MessageInput += msg;
 
-    public void AddImages(List<string> imgUris)
+    public void AddFiles(List<string> imgUris)
     {
         foreach (string imgUri in imgUris) AddToMsg($"<img src='{imgUri}' alt='Image' class='resizedImg' />");
 
