@@ -1,7 +1,7 @@
 # RealtimeChat_WebAssembly
 Real-time chat application with SignalR, .NET, Blazor/WebAssembly, ...
 
-Example project for EmojiFilePicker.
+[Example project](https://github.com/wsdt/RealtimeChat_WebAssembly/tree/master/WSDTChat) for [EmojiFilePicker](https://github.com/wsdt/Blazor_EmojiFilePicker).
 
 ## Features
 * Real-Time Chat via SignalR
