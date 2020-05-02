@@ -1,4 +1,4 @@
-# RealtimeChat_WebAssembly
+# RealtimeChat_WebAssembly [![HitCount](http://hits.dwyl.com/wsdt/RealtimeChat_WebAssembly.svg)](http://hits.dwyl.com/wsdt/RealtimeChat_WebAssembly) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://bitbucket.org/lbesson/ansi-colors) [![GitHub license](https://img.shields.io/github/license/wsdt/RealtimeChat_WebAssembly.svg)](https://github.com/wsdt/RealtimeChat_WebAssembly/blob/master/LICENSE) [![Generic badge](https://img.shields.io/badge/Made%20with-Blazor-blueviolet)](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor)
 Real-time chat application with SignalR, .NET, Blazor/WebAssembly, ...
 
 [Example project](https://github.com/wsdt/RealtimeChat_WebAssembly/tree/master/WSDTChat) for [EmojiFilePicker](https://github.com/wsdt/Blazor_EmojiFilePicker).
@@ -27,3 +27,11 @@ Real-time chat application with SignalR, .NET, Blazor/WebAssembly, ...
 * Microsoft.EntityFrameworkCore.Tools@^3.1.3
 * Microsoft.VisualStudio.Web.CodeGeneration.Design@^3.1.1
 * SendGrid@^9.14.0
+
+
+## Contribution [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+This project is licensed under GNU V3, so contributions/pull-requests are welcome. All contributors get listed here. 
+
+**Contributors** [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kennethreitz)
+- Kevin Riedl ([WSDT](https://github.com/wsdt))
