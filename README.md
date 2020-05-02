@@ -11,5 +11,6 @@ Example project for EmojiFilePicker.
 * Emoji-Selektor
 * System-Messages (e.g. when a user joins a conversation)
 * Animated (e.g. new messages, ...)
+* Multiple messages from same sender is summarized into one for readability
 
 <img src="https://github.com/wsdt/RealtimeChat_WebAssembly/blob/master/WSDTChat/Docs/Conversation.PNG" alt="Conversation" title="Example conversation" />
