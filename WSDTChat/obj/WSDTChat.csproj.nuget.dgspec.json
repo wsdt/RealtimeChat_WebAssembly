@@ -5,10 +5,10 @@
   },
   "projects": {
     "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj": {
-      "version": "0.0.4",
+      "version": "0.0.5",
       "restore": {
         "projectUniqueName": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
-        "projectName": "wsdt.blazor.emojifileinput",
+        "projectName": "WSDT.Blazor.EmojiFileInput",
         "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
         "packagesPath": "C:\\Users\\WSDT\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\obj\\",
