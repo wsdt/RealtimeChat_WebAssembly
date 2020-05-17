@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj": {}
+    "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj": {
-      "version": "0.0.7",
+    "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj": {
+      "version": "0.0.8",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
+        "projectUniqueName": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
         "projectName": "WSDT.Blazor.EmojiFileInput",
-        "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
+        "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
         "packagesPath": "C:\\Users\\WSDT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\obj\\",
+        "outputPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -73,18 +73,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj": {
+    "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
+        "projectUniqueName": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
         "projectName": "WSDTChat",
-        "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
+        "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
         "packagesPath": "C:\\Users\\WSDT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\WSDTChat\\obj\\",
+        "outputPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -104,8 +104,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj": {
-                "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj"
+              "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj": {
+                "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj"
               }
             }
           }
@@ -174,7 +174,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kiSSBavFXHSPizVsd+XrS1AfUz//20pct+QUza7GAU908CUi2bnQgy7Q9tFQ0LGsdURAjVK6mmI9NBXBlTHDeA==",
+  "dgSpecHash": "ab20Ncv9L/lltgkChQPsqVVacfPe9xisQObYgaC4DF+oMSijD73Y1VJgQkGxeG2EpiRvyfNeJvupCBDQ742B1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
+  "projectFilePath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WSDT\\.nuget\\packages\\bootstrap\\4.4.1\\bootstrap.4.4.1.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",
