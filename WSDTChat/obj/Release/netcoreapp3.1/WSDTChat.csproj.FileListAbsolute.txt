@@ -187,3 +187,4 @@ C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\WSDTChat\obj\R
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\WSDTChat\obj\Release\netcoreapp3.1\WSDTChat.dll
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\WSDTChat\obj\Release\netcoreapp3.1\WSDTChat.pdb
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\WSDTChat\obj\Release\netcoreapp3.1\WSDTChat.genruntimeconfig.cache
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\WSDTChat\bin\Release\netcoreapp3.1\EmojiPicker.xml
