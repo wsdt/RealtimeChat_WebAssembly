@@ -79,7 +79,7 @@
             </AuthorizeView>
 
             <small style="font-style:italic;font-weight: bold;">Markdown and Html are supported :-)</small>
-            <EmojiInput IsSubmitDisabled="@(!ChatService.IsConnected())" Placeholder="Message.." ShowSubmit="true" 
+            <EmojiInput IsSubmitDisabled="@(!ChatService.IsConnected())" Placeholder="Message.." ShowSubmit="true" CustomSymbols="@CustomSymbols"
                         @bind-Message="ChatService.ChatForm.MessageInput" AddFiles="AddFiles" FileUploadRoute="@(ICommonRoutes.FILE_UPLOAD)" />
             <ValidationMessage For="@(() => ChatService.ChatForm.MessageInput)" />
         </EditForm>
@@ -94,6 +94,11 @@
 
 @code {
     [CascadingParameter] Task<AuthenticationState> AuthenticationStateTask { get; set; }
+
+    private List<string> CustomSymbols = new List<string>()
+    {
+        "⺀", "⽥", "⽨", "⽣", "㣕"
+    };
 
     private void AddToMsg(string msg) => ChatService.ChatForm.MessageInput += msg;
 

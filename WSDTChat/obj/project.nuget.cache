@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FkA7Dk7Ldmvpf12vw9vjvH3XhJzHsUNEoZiu1T0u41msqY6Uv/36n9bR9ekc3nuFrhWLk7KJc5LSRyVHM8UeYQ==",
+  "dgSpecHash": "3wlxTcd/HTzA9i1AsSEeZiZuPhd9qQNRh8ikBzhZJVNfNKlw4N+fxPEpc5JwtG0fQp0ZeuIrjH7trP7Pi/fvFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
   "expectedPackageFiles": [
@@ -188,7 +188,8 @@
     "C:\\Users\\WSDT\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\WSDT\\.nuget\\packages\\tewr.blazor.filereader\\1.5.0.20109\\tewr.blazor.filereader.1.5.0.20109.nupkg.sha512"
+    "C:\\Users\\WSDT\\.nuget\\packages\\tewr.blazor.filereader\\1.5.0.20109\\tewr.blazor.filereader.1.5.0.20109.nupkg.sha512",
+    "C:\\Users\\WSDT\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -2902,7 +2902,7 @@
           "buildMultiTargeting/Tewr.Blazor.FileReader.props": {}
         }
       },
-      "WSDT.Blazor.EmojiFileInput/0.1.1": {
+      "WSDT.Blazor.EmojiFileInput/0.1.2": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
@@ -9381,7 +9381,7 @@
         "tewr.blazor.filereader.nuspec"
       ]
     },
-    "WSDT.Blazor.EmojiFileInput/0.1.1": {
+    "WSDT.Blazor.EmojiFileInput/0.1.2": {
       "type": "project",
       "path": "../EmojiPicker/EmojiPicker.csproj",
       "msbuildProject": "../EmojiPicker/EmojiPicker.csproj"
@@ -9398,7 +9398,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
       "SendGrid >= 9.14.0",
-      "WSDT.Blazor.EmojiFileInput >= 0.1.1"
+      "WSDT.Blazor.EmojiFileInput >= 0.1.2"
     ]
   },
   "packageFolders": {
@@ -9494,6 +9494,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.2, 3.1.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9502,7 +9508,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

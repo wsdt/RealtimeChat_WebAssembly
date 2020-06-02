@@ -10,6 +10,9 @@
         <member name="P:WSDT.EmojiFilePicker.EmojiInput.ClassEmojiTabBtnInActive">
             <summary>Defines the css-classes for the tab button within the emoji panel (state: inactive)</summary>
         </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.CustomSymbols">
+            <summary>Add custom symbols/emojies to this list to create a new tab at the end of the emoji picker.</summary>
+        </member>
         <member name="P:WSDT.EmojiFilePicker.EmojiInput.FileUploadRoute">
             <summary>Web-Url the uploaded files will be sent to.</summary>
         </member>
@@ -60,6 +63,9 @@
         </member>
         <member name="P:WSDT.EmojiFilePicker.Sub.EmojiPanelContainer.ClassEmojiTabBtnInActive">
             <summary>Defines the css-classes for the tab button within the emoji panel (state: inactive)</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.Sub.EmojiPanelContainer.EmojiList">
+            <summary>Emojies separated by tab.</summary>
         </member>
     </members>
 </doc>
