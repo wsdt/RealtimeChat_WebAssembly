@@ -26,7 +26,7 @@ namespace WSDTChat.Domain
             ChatUser cu = obj as ChatUser;
             if ((object)cu == null) return false;
 
-            return (EMail.Equals(cu.EMail) && IsGuest.Equals(cu.IsGuest));
+            return ((EMail?.Equals(cu?.EMail) ?? false) && IsGuest.Equals(cu?.IsGuest));
         }
 
         public override int GetHashCode()

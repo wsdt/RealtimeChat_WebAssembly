@@ -4,6 +4,9 @@
         <name>EmojiPicker</name>
     </assembly>
     <members>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.ShowPreview">
+            <summary>Enable message preview. Useful for HTML/Markdown preview.</summary>
+        </member>
         <member name="P:WSDT.EmojiFilePicker.EmojiInput.ClassEmojiTabBtnActive">
             <summary>Defines the css-classes for the tab button within the emoji panel (state: active)</summary>
         </member>
