@@ -4,6 +4,12 @@
         <name>EmojiPicker</name>
     </assembly>
     <members>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.ShowClearBtn">
+            <summary>Display clear button</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.ClearBtnLbl">
+            <summary>Reset/Clear Button label. Only takes effect when ShowClearBtn is true.</summary>
+        </member>
         <member name="P:WSDT.EmojiFilePicker.EmojiInput.ShowPreview">
             <summary>Enable message preview. Useful for HTML/Markdown preview.</summary>
         </member>
