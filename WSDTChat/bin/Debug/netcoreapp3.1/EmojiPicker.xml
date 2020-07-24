@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EmojiPicker</name>
+    </assembly>
+    <members>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.ShowClearBtn">
+            <summary>Display clear button</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.ClearBtnLbl">
+            <summary>Reset/Clear Button label. Only takes effect when ShowClearBtn is true.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.ShowPreview">
+            <summary>Enable message preview. Useful for HTML/Markdown preview.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.ClassEmojiTabBtnActive">
+            <summary>Defines the css-classes for the tab button within the emoji panel (state: active)</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.ClassEmojiTabBtnInActive">
+            <summary>Defines the css-classes for the tab button within the emoji panel (state: inactive)</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.CustomSymbols">
+            <summary>Add custom symbols/emojies to this list to create a new tab at the end of the emoji picker.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.FileUploadRoute">
+            <summary>Web-Url the uploaded files will be sent to.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.Message">
+            <summary>Text-input value. Mainly used to bind internal value.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.MessageChanged">
+            <summary>´Callback for OnMessageChanged. Mainly used internally.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.AddFiles">
+            <summary>Function to be called when files are uploaded.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.Placeholder">
+            <summary>Placeholder for text input</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.AddonPrepend">
+            <summary>HTML-Entity, icon or text for bootstrap add-on prepend (input-field).</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.ShowFilePicker">
+            <summary>If true a btn is shown, to toggle a dropzone for uploading files.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.ShowSubmit">
+            <summary>Shows submit button if true.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.IsSubmitDisabled">
+            <summary>Disables submit button if true.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.SubmitBtnLbl">
+            <summary>Label for submit button.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.SmileyBtnIcon">
+            <summary>HTML-Entity, icon or text for smiley button.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.FileBtnIcon">
+            <summary>HTML-Entity, icon or text for file button.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.AutoComplete">
+            <summary>Determines if input-autocomplete is on|off.</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.Sub.EmojiPanel.ClassEmojiTabBtnActive">
+            <summary>Defines the css-classes for the tab button within the emoji panel (state: active)</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.Sub.EmojiPanel.ClassEmojiTabBtnInActive">
+            <summary>Defines the css-classes for the tab button within the emoji panel (state: inactive)</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.Sub.EmojiPanelContainer.ClassEmojiTabBtnActive">
+            <summary>Defines the css-classes for the tab button within the emoji panel (state: active)</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.Sub.EmojiPanelContainer.ClassEmojiTabBtnInActive">
+            <summary>Defines the css-classes for the tab button within the emoji panel (state: inactive)</summary>
+        </member>
+        <member name="P:WSDT.EmojiFilePicker.Sub.EmojiPanelContainer.EmojiList">
+            <summary>Emojies separated by tab.</summary>
+        </member>
+    </members>
+</doc>

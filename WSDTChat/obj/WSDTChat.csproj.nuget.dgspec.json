@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj": {}
+    "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj": {
+    "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj": {
       "version": "1.1.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
+        "projectUniqueName": "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
         "projectName": "WSDT.Blazor.EmojiFileInput",
-        "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
-        "packagesPath": "C:\\Users\\WSDT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\obj\\",
+        "projectPath": "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
+        "packagesPath": "C:\\Users\\keri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\EmojiPicker\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\WSDT\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\keri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -69,12 +65,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -83,26 +73,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj": {
+    "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
+        "projectUniqueName": "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
         "projectName": "WSDTChat",
-        "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
-        "packagesPath": "C:\\Users\\WSDT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\WSDTChat\\obj\\",
+        "projectPath": "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\WSDTChat\\WSDTChat.csproj",
+        "packagesPath": "C:\\Users\\keri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\WSDTChat\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\WSDT\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\keri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -114,8 +100,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj": {
-                "projectPath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj"
+              "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj": {
+                "projectPath": "C:\\Users\\keri\\Desktop\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj"
               }
             }
           }
@@ -176,12 +162,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -190,7 +170,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
